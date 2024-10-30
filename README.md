@@ -106,7 +106,7 @@ terraform {
 ## **🐞 Troubleshooting**
 
 - **GitHub Actions Failures**: Ensure GitHub Secrets are set up correctly and accessible.
-- *Terraform Errors**: Verify Azure permissions and variable configurations in terraform.tfvars.
+- **Terraform Errors**: Verify Azure permissions and variable configurations in terraform.tfvars.
 
 
 ## **🌐 Connect with Me**
