@@ -38,14 +38,7 @@ module "acr" {
   acr_name            = var.acr_name
 }
 
-module "key_vault" {
-  source              = "./modules/key_vault"
-  resource_group_name = var.resource_group_name
-  location           = var.location
-  kv_name             = var.kv_name
-  vnet_name           = module.vnet.vnet_name
-  subnet_id           = module.vnet.subnet_id
-}
+
 
 module "sql_database" {
   source              = "./modules/sql_database"
