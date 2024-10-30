@@ -37,9 +37,9 @@ project-root/
 ## ⚙️ Prerequisites
 
 Ensure you have the following:
-- **Terraform* (>= 1.4.0) 🛠️
+- **Terraform** (>= 1.4.0) 🛠️
 - **Azure CLI** for authentication and resource management 📟
-- An *Azure Subscription** with necessary permissions ✅
+- An **Azure Subscription** with necessary permissions ✅
 
 ## 🚀 Setup and Usage
 
@@ -47,11 +47,13 @@ Ensure you have the following:
 ```bash
 git clone https://github.com/BlessedXd/azure_terraform
 cd azure-infrastructure-terraform
+```
 
 2️⃣ **Configure Azure Credentials**
 ```bash
 az login
 az account set --subscription "your-subscription-id"
+```
 
 3️⃣ **Add GitHub Secrets**
 To enable **GitHub Actions**, add the following secrets to your repository (Settings > Secrets):
@@ -63,11 +65,13 @@ To enable **GitHub Actions**, add the following secrets to your repository (Sett
 4️⃣ **Initialize Terraform**
 ```bash
 terraform init
+```
 
 5️⃣ **Plan and Apply**
 ```bash
 terraform plan
 terraform apply
+```
 
 6️⃣ **GitHub Actions Workflow ⚡️**
 **This repository includes** a GitHub Actions workflow in .github/workflows/terraform.yml to automate Terraform actions. It is triggered on push to main and pull requests, performing the following steps:
@@ -84,7 +88,7 @@ Each module in the modules/ directory corresponds to a specific Azure resource f
 
 8️⃣ **Remote Backend Configuration for Terraform State**
 The backend for Terraform state is stored in an Azure Storage Account, created specifically for this purpose. The configuration in main.tf looks like this:
-
+```plaintext
 terraform {
   backend "azurerm" {
     resource_group_name  = var.resource_group
@@ -93,10 +97,11 @@ terraform {
     key                  = "prod.terraform.tfstate"
   }
 }
-
+```
 ## **🧹 Clean Up**
 ```bash
    terraform destroy
+```
 
 ## **🐞 Troubleshooting**
 
@@ -122,4 +127,4 @@ This project is licensed under the MIT License. See the file for details. 📜
 
 ---
 
-Thank you for checking out my Azure Terraform Project! Happy learning! 🎉
+**Thank you for checking out my Azure Terraform Project! Happy learning! 🎉**
