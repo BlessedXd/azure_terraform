@@ -32,6 +32,7 @@ project-root/
     ├── sql_database/
     ├── storage_account/
     └── vnet/
+```
 
 ## ⚙️ Prerequisites
 
@@ -42,46 +43,46 @@ Ensure you have the following:
 
 ## 🚀 Setup and Usage
 
-1️⃣ Clone the Repository
+1️⃣ **Clone the Repository**
 ```bash
-   git clone https://github.com/BlessedXd/azure_terraform
-   cd azure-infrastructure-terraform
+git clone https://github.com/BlessedXd/azure_terraform
+cd azure-infrastructure-terraform
 
-2️⃣ Configure Azure Credentials
+2️⃣ **Configure Azure Credentials**
 ```bash
-   az login
-   az account set --subscription "your-subscription-id"
+az login
+az account set --subscription "your-subscription-id"
 
-3️⃣ Add GitHub Secrets
+3️⃣ **Add GitHub Secrets**
 To enable **GitHub Actions**, add the following secrets to your repository (Settings > Secrets):
 🔑 AZURE_CLIENT_ID – Application (client) ID
 🔑 AZURE_CLIENT_SECRET – Application secret
 🔑 AZURE_SUBSCRIPTION_ID – Azure subscription ID
 🔑 AZURE_TENANT_ID – Directory (tenant) ID
 
-4️⃣ Initialize Terraform
+4️⃣ **Initialize Terraform**
 ```bash
-   terraform init
+terraform init
 
-5️⃣ Plan and Apply
+5️⃣ **Plan and Apply**
 ```bash
-   terraform plan
-   terraform apply
+terraform plan
+terraform apply
 
-6️⃣ GitHub Actions Workflow ⚡️
+6️⃣ **GitHub Actions Workflow ⚡️**
 **This repository includes** a GitHub Actions workflow in .github/workflows/terraform.yml to automate Terraform actions. It is triggered on push to main and pull requests, performing the following steps:
 
 - Terraform Init: Initializes the backend
 - Terraform Plan: Generates a deployment plan
 - Terraform Apply: Applies changes on the main branch only
 
-7️⃣ Terraform Modules 🧩
+7️⃣ **Terraform Modules 🧩**
 Each module in the modules/ directory corresponds to a specific Azure resource for modularity. Modules include:
 
 - App Service Module (modules/app_service/): Deploys an App Service Plan and App Service, with VNet integration.
 -VNet Module (modules/vnet/): Configures a Virtual Network and subnet.
 
-8️⃣ Remote Backend Configuration for Terraform State
+8️⃣ **Remote Backend Configuration for Terraform State**
 The backend for Terraform state is stored in an Azure Storage Account, created specifically for this purpose. The configuration in main.tf looks like this:
 
 terraform {
@@ -93,17 +94,17 @@ terraform {
   }
 }
 
-## 🧹 Clean Up
+## **🧹 Clean Up**
 ```bash
    terraform destroy
 
-## 🐞 Troubleshooting
+## **🐞 Troubleshooting**
 
 - **GitHub Actions Failures**: Ensure GitHub Secrets are set up correctly and accessible.
 - *Terraform Errors**: Verify Azure permissions and variable configurations in terraform.tfvars.
 
 
-## 🌐 Connect with Me
+## **🌐 Connect with Me**
 
 Let's connect and share knowledge! Feel free to follow me on my social media platforms:
 
@@ -111,11 +112,11 @@ Let's connect and share knowledge! Feel free to follow me on my social media pla
 - [Telegram](https://t.me/stoptalk1n) 🐦
 - [GitHub](https://github.com/BlessedXd) 🐙
 
-## 🤝 Contributions
+## **🤝 Contributions**
 
 Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or a pull request. 💬
 
-## 📄 License
+## **📄 License**
 
 This project is licensed under the MIT License. See the file for details. 📜
 
