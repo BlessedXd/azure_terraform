@@ -17,3 +17,15 @@ output "sql_server_fqdn" {
 output "storage_account_primary_web_endpoint" {
   value = module.storage_account.primary_web_endpoint
 }
+
+output "app_service_id" {
+  value = module.app_service.id
+}
+
+output "acr_name" {
+  value = module.acr.name
+}
+
+output "key_vault_name" {
+  value = module.key_vault.name
+}

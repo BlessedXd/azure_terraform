@@ -1,5 +1,5 @@
-resource_group_name = "my-resource-group"
-location           = "East US"
+resource_group_name = "canada-test"
+location           = "Canada East"
 vnet_name          = "myVNet"
 app_service_plan_name = "myAppServicePlan"
 app_service_name    = "myAppService"

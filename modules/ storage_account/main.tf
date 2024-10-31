@@ -1,10 +1,11 @@
-resource "azurerm_storage_account" "example" {
-  name                     = var.storage_account_name
+resource "azurerm_storage_account" "storage" {
+  name                     = "mystorageacct"
   resource_group_name      = var.resource_group_name
   location                 = var.location
-  account_tier            = "Standard"
+  account_tier             = "Standard"
   account_replication_type = "LRS"
 }
+
 
 resource "azurerm_private_endpoint" "storage_private_endpoint" {
   name                = "storage-private-endpoint"

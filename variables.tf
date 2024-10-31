@@ -43,3 +43,23 @@ variable "storage_account_name" {
   description = "The name of the Storage Account"
   type        = string
 }
+
+variable "tenant_id" {
+  description = "Tenant ID for Azure"
+  type        = string
+}
+
+variable "subscription_id" {
+  description = "Subscription ID for Azure"
+  type        = string
+}
+
+variable "client_id" {
+  description = "Client ID for Azure Service Principal"
+  type        = string
+}
+
+variable "client_secret" {
+  description = "Client Secret for Azure Service Principal"
+  type        = string
+}
