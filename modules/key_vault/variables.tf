@@ -14,11 +14,11 @@ variable "kv_name" {
 }
 
 variable "tenant_id" {
-  description = "The tenant ID"
+  description = "The ID of the Azure tenant"
   type        = string
 }
 
-variable "subnet_id" {
-  description = "The ID of the subnet for the Key Vault"
+variable "object_id" {
+  description = "The Object ID of the Azure AD principal"
   type        = string
 }
